@@ -6,6 +6,7 @@
 ## What I have learnt in this project?
 
 - Designing different styles in a webpage without using animations/images
+- Nav bar design
 
 ## Time taken to finish this project
 - 4-5 hrs
