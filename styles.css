@@ -51,6 +51,38 @@ body{
     left:-30px;
     top:5px;
 }
+@media only screen and (max-width:900px) {
+    .list{
+      display: none;
+    }
+    .nav-bar{
+      display: flex;
+      align-items: center;
+    }
+    .nav-bar::before{
+      content: "";
+      display: inline-block;
+      width:40px;
+      height:40px;
+      background-color: transparent;
+      background-image: url(./assets/hamburger-menu-more-2-svgrepo-com.svg);
+      background-size:40px 40px;
+      position: absolute;
+      right:5px;
+    }
+    .contact{
+        display: none;
+    }
+    .nav-logo{
+        top:5px;
+        left:20px;
+    }
+    .nav-bar::after{
+        width:90%;
+        right:20px;
+        left:20px;
+    }
+  }
 
 /* container */
 .container{
@@ -80,7 +112,6 @@ font-size:50px;
 .right-container{
     width:50%;
     position:relative;
-    height:70vh;
 }
 
 /* cards and images */
@@ -117,6 +148,7 @@ img{
     right: 100px;
     top:0;
 }
+/* line */
 .bulb::after{
     content:"";
     display: inline-block;
@@ -127,6 +159,7 @@ img{
     left:100%;
     top:50%;
 }
+/* round */
 .bulb::before{
     content:"";
     display: inline-block;
@@ -138,17 +171,19 @@ img{
     left:120%;
     top:45%;
 }
+/* background card */
 .right-container>div:last-child::before{
     content:'';
     background-color:#b3b3b3;
     display: inline-block;
     width:235px;
-    height:22vh;
+    height:125px;
     opacity:0.2;
     position:absolute;
     left:-100px;
     bottom:50px;
 }
+/* line */
 .puzzle::after{
     content:"";
     display: inline-block;
@@ -157,8 +192,9 @@ img{
     background-color: #fff;
     position:absolute;
     right:77px;
-    top:120px;
+    top:130px;
 }
+/* round */
 .puzzle::before{
     content:"";
     display: inline-block;
@@ -168,16 +204,56 @@ img{
     background-color: #fff;
     position:absolute;
     right:70px;
-    top:160px;
+    top:170px;
 }
+/* background card */
 .right-container>div:first-child::before{
     content:'';
     background-color:#b3b3b3;
     display: inline-block;
     width:250px;
-    height:115px;
+    height:125px;
     opacity:0.2;
     position:absolute;
     right:105px;
     top:25px;
 } 
+@media only screen and (max-width:900px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+        margin-top:10px;
+    }
+    .left-container{
+        padding-left:0px;
+        text-align: center;
+        padding-bottom:25px;
+    }
+    .left-container h1{
+        font-size:35px;
+    }
+    .button{
+        padding:10px 20px;
+        font-size:14px;
+    }
+    body{
+        background-size:cover;
+    }
+    .right-container{
+       width:100%;
+    }
+    .puzzle{
+        right:0;
+    }
+    .right-container>div:first-child::before{
+        right:5px;
+    }
+    .bulb{
+        bottom:30%;
+        left:0;
+    }
+    .right-container>div:last-child::before{
+        left:0px;
+        bottom:45%;
+    }
+}
